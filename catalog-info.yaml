@@ -1,0 +1,29 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: my-dsp-rhoai-sklearn-dsp
+  annotations:
+    argocd/app-name: my-dsp-rhoai-sklearn-dsp-build
+    backstage.io/kubernetes-id: my-dsp-rhoai-sklearn-dsp
+    backstage.io/kubernetes-namespace: my-dsp
+    backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: nos-og/my-dsp-rhoai-sklearn
+    janus-idp.io/tekton-enabled: 'true'
+  tags:
+    - ml
+    - workshop  
+    - python
+  links:
+    - url: https://console-openshift-consoleapps.cap.techlab.netone.co.jp/dev-pipelines/ns/my-dsp/
+      title: Pipelines
+      icon: web
+    - url: https://rhods-dashboard-redhat-ods-applicationsapps.cap.techlab.netone.co.jp/projects
+      title: Red Hat OpenShift AI
+      icon: web
+    - url: https://devspacesapps.cap.techlab.netone.co.jp/#https://github.com/nos-og/my-dsp-rhoai-sklearn?che-editor=che-incubator/che-code/latest&devfilePath=.devfile-vscode.yaml
+      title: OpenShift Dev Spaces (VS Code)
+      icon: web
+spec:
+  type: service
+  lifecycle: development
+  owner: "janus-authors"
